@@ -19,7 +19,7 @@ function Navbar() {
           rounded-lg
           font-medium
           hover:bg-[#0F832E]/90
-          h-[55px]
+          h-13.5
           transition-all
         "
       >
