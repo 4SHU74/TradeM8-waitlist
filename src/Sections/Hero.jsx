@@ -1,5 +1,5 @@
 import React from "react";
-import phone from "./assets/phone.png";
+import phone from "../assets/mockup.png";
 
 const Hero = () => {
   return (
@@ -96,7 +96,7 @@ const Hero = () => {
             <img
               src={phone}
               alt="TradeM8 App"
-              className="w-70 lg:w-85 shadow-[0_10px_20px_rgba(0,0,0,0.35)]"
+              className="w-70 lg:w-85 shadow-[0_10px_20px_rgba(0,0,0,0.35)] rounded-[60px]"
             />
           </div>
         </div>
