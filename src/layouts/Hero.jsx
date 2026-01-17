@@ -1,5 +1,6 @@
 import React from "react";
 import phone from "../assets/mockup.png";
+import { Button } from "../components/ui/Button";
 
 const Hero = () => {
   return (
@@ -27,36 +28,12 @@ const Hero = () => {
           </p>
 
           <div className="flex space-x-4">
-            <button
-              className="
-                bg-green-700
-                hover:bg-green-800
-                text-white
-                px-8
-                py-4
-                rounded-xl
-                font-semibold
-                transition
-              "
-            >
+            <Button variant="default" size="lg">
               Join the Waitlist
-            </button>
-            <button
-              className="
-                border-2
-                border-slate-800
-                hover:bg-slate-800
-                hover:text-white
-                text-slate-800
-                px-8
-                py-4
-                rounded-xl
-                font-semibold
-                transition
-              "
-            >
-              Learn more
-            </button>
+            </Button>
+            <Button variant="secondary" size="lg">
+              Learn More
+            </Button>
           </div>
 
           <div className="flex items-center space-x-8 pt-4 text-green-700 font-medium">

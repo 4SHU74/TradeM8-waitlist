@@ -20,7 +20,8 @@ const buttonVariants = cva(
           "border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 hover:text-slate-900",
 
         // Secondary: Your Dark Blue (from Features section)
-        secondary: "bg-[#182B3A] text-white hover:bg-[#233b4d]",
+        secondary:
+          " border-2 border-[#2F5974] bg-transparent text-[#2F5974] hover:bg-[#2F5974] hover:text-white transition-all duration-300",
 
         // Ghost: No background until hover (Good for nav links)
         ghost: "hover:bg-slate-100 hover:text-slate-900",
@@ -31,7 +32,7 @@ const buttonVariants = cva(
       size: {
         default: "h-11 px-8 py-2", // Made slightly taller (h-11) for modern look
         sm: "h-9 rounded-lg px-3",
-        lg: "h-14.5 rounded-xl px-8 text-base",
+        lg: "h-14.5  rounded-xl px-8 text-base",
         icon: "h-10 w-10",
       },
     },
