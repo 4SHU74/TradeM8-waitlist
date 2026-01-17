@@ -1,8 +1,8 @@
-import Navbar from "./Sections/Navbar.jsx";
-import Hero from "./Sections/Hero.jsx";
-import Features from "./Sections/features.jsx";
-import Joinwaitlist from "./Sections/Joinwaitlist.jsx";
-import Footer from "./Sections/Footer.jsx";
+import Navbar from "./layouts/Navbar.jsx";
+import Hero from "./layouts/Hero.jsx";
+import Features from "./layouts/features.jsx";
+import Joinwaitlist from "./layouts/Joinwaitlist.jsx";
+import Footer from "./layouts/Footer.jsx";
 
 export default function App() {
   return (
