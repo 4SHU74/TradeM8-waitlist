@@ -4,28 +4,52 @@ import { Bell, BookOpen, Check } from "lucide-react";
 const FeatureCard = ({ title, description, items, color, Icon }) => (
   <div
     className={`
-      ${color}
-      p-8
-      rounded-3xl
-      text-white
-      flex-1
+      overflow-hidden
       flex
+      flex-1
       flex-col
       gap-4
       relative
-      overflow-hidden
+      p-8
+      text-white
+      ${color}
+      rounded-3xl
     `}
   >
-    <div className="bg-white/20 w-fit p-3 rounded-xl">
+    <div
+      className="
+        p-3
+        w-fit
+        bg-white/20
+        rounded-xl
+      "
+    >
       <Icon size={24} />
     </div>
 
-    <h3 className="text-2xl font-bold mt-2">{title}</h3>
-    <p className="text-sm opacity-90 leading-relaxed">{description}</p>
+    <h3 className="mt-2 font-bold text-2xl">{title}</h3>
+    <p
+      className="
+        leading-relaxed
+        text-sm
+        opacity-90
+      "
+    >
+      {description}
+    </p>
 
     <ul className="mt-4 space-y-3">
       {items.map((item, idx) => (
-        <li key={idx} className="flex items-center gap-3 text-sm font-medium">
+        <li
+          key={idx}
+          className="
+            flex
+            gap-3
+            items-center
+            font-medium
+            text-sm
+          "
+        >
           <Check size={18} className="text-yellow-400" strokeWidth={3} />
           {item}
         </li>
@@ -36,18 +60,47 @@ const FeatureCard = ({ title, description, items, color, Icon }) => (
 
 export default function TradeM8Features() {
   return (
-    <section className="max-w-5xl mx-auto p-6 bg-slate-50 font-sans">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-slate-800 mb-3">
+    <section
+      className="
+        mx-auto
+        p-6
+        max-w-5xl
+        font-sans
+        bg-slate-50
+      "
+    >
+      <div className="mb-12 text-center">
+        <h2
+          className="
+            mb-3
+            font-bold
+            text-3xl
+            text-slate-800
+          "
+        >
           Two Powerful Features, One Simple App
         </h2>
-        <p className="text-slate-500 max-w-xl mx-auto text-sm">
+        <p
+          className="
+            mx-auto
+            max-w-xl
+            text-slate-500
+            text-sm
+          "
+        >
           TradeM8 focuses on what matters most: staying informed and tracking
           your progress with professional-grade tools.
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6">
+      <div
+        className="
+          flex
+          flex-col
+          w-full
+          md:flex-row
+        "
+      >
         <FeatureCard
           title="Smart Price Alerts"
           color="bg-emerald-600"
