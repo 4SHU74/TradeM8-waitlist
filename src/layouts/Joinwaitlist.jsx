@@ -22,7 +22,7 @@ export default function WaitlistSection() {
         {/* Icon */}
         <div
           className="
-            bg-green-900
+            bg-green-800
             w-16
             h-16
             rounded-full
@@ -40,7 +40,7 @@ export default function WaitlistSection() {
         <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
           Be First to Trade Smarter
         </h2>
-        <p className="text-slate-500 text-lg mb-10 max-w-lg mx-auto">
+        <p className="text-slate-500 text-md mb-10 max-w-lg mx-auto">
           Join our waitlist and get early access to TradeM8 when we launch.
         </p>
 

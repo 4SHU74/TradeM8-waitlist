@@ -6,12 +6,14 @@ import Footer from "./layouts/Footer.jsx";
 
 export default function App() {
   return (
-    <div className="mx-15">
-      <Navbar />
-      <Hero />
-      <Features />
-      <Joinwaitlist />
+    <>
+      <div className="mx-15">
+        <Navbar />
+        <Hero />
+        <Features />
+        <Joinwaitlist />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

@@ -85,7 +85,7 @@ export default function TradeM8Features() {
             mx-auto
             max-w-xl
             text-slate-500
-            text-sm
+            text-md
           "
         >
           TradeM8 focuses on what matters most: staying informed and tracking
