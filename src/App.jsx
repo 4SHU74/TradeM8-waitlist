@@ -7,11 +7,11 @@ import Footer from "./layouts/Footer.jsx";
 export default function App() {
   return (
     <>
-      <div className="mx-15   ">
+      <div className=" mx-4 md:mx-15   ">
         <Navbar />
-        <Hero classname="space-y-12 mb-20" />
-        <Features classname="space-y-10" />
-        <Joinwaitlist classname="space-y-8 mb-30 " />
+        <Hero />
+        <Features />
+        <Joinwaitlist />
       </div>
       <Footer />
     </>
