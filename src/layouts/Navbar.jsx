@@ -9,18 +9,20 @@ function Navbar() {
         items-center
         justify-between
         my-3
-        px-8
-        py-4
+        px-4 py-3
+       md:px-8
+        md:py-4
         w-full
         bg-#EDEEF0
       "
     >
-      <div className="flex gap-3 items-center w-fit">
+      <div className="flex gap-2 mb:gap-3 items-center w-fit">
         <div
           class="
             overflow-hidden
-            h-10
-            w-10
+            h-8 w-8
+            md:h-10
+            md:w-10
             shadow-sm
             rounded-lg
           "
@@ -32,7 +34,8 @@ function Navbar() {
             font-bold
             leading-none
             text-[#1A3B50]
-            text-xl
+            text-lg
+            md:text-xl
             tracking-tight
           "
         >
@@ -40,7 +43,7 @@ function Navbar() {
         </span>
       </div>
 
-      <Button variant="default" size="lg">
+      <Button variant="default" size="lg" className="text-sm md:text-base">
         Join the Waitlist
       </Button>
     </nav>
