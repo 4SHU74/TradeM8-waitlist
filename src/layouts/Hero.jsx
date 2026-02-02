@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div className="space-y-5">
-          <h1 className="text-6xl font-bold text-slate-800 leading-tight ">
+          <h1 className=" text-3xl md:text-6xl font-bold text-slate-800 leading-tight ">
             Never Miss a <br />
             <span className="text-green-600">Trade</span>
           </h1>
@@ -16,8 +16,8 @@ const Hero = () => {
           <p
             className="
               text-[#1F3B4D]/70
-              text-lg
-              md:text-xl
+              text-md
+              md:text-lg
               max-w-md
               leading-relaxed
               font-medium
@@ -28,21 +28,29 @@ const Hero = () => {
           </p>
 
           <div className="flex space-x-4">
-            <Button variant="default" size="lg">
+            <Button
+              variant="default"
+              size="lg"
+              className="text-sm md:text-base"
+            >
               Join the Waitlist
             </Button>
-            <Button variant="secondary" size="lg">
+            <Button
+              variant="secondary"
+              size="lg"
+              className="text-sm md:text-base"
+            >
               Learn More
             </Button>
           </div>
 
           <div className="flex items-center space-x-8 pt-4 text-green-700 font-medium">
-            <div className="flex items-center space-x-2">
-              <span>🛡️</span>
+            <div className="flex items-center space-x-2 text-sm md:text-base">
+              <span className="text-lg md:text-xl">🛡️</span>
               <span>Secure & Trusted</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <span>📱</span>
+            <div className="flex items-center space-x-2 text-sm md:text-base">
+              <span className="text-lg md:text-xl">📱</span>
               <span>Android</span>
             </div>
           </div>
