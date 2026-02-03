@@ -28,13 +28,15 @@ const Hero = () => {
           </p>
 
           <div className="flex space-x-4">
-            <Button
-              variant="default"
-              size="lg"
-              className="text-sm md:text-base"
-            >
-              Join the Waitlist
-            </Button>
+            <a href="#waitlist">
+              <Button
+                variant="default"
+                size="lg"
+                className="text-sm md:text-base"
+              >
+                Join the Waitlist
+              </Button>
+            </a>
 
             <a href="#features">
               <Button
