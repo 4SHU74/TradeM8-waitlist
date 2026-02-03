@@ -61,6 +61,7 @@ const FeatureCard = ({ title, description, items, color, Icon }) => (
 export default function TradeM8Features() {
   return (
     <section
+      id="features"
       className="
         mx-auto
         p-6

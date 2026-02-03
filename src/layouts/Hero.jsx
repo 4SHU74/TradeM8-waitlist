@@ -35,13 +35,16 @@ const Hero = () => {
             >
               Join the Waitlist
             </Button>
-            <Button
-              variant="secondary"
-              size="lg"
-              className="text-sm md:text-base"
-            >
-              Learn More
-            </Button>
+
+            <a href="#features">
+              <Button
+                variant="secondary"
+                size="lg"
+                className="text-sm md:text-base"
+              >
+                Learn More
+              </Button>
+            </a>
           </div>
 
           <div className="flex items-center space-x-8 pt-4 text-green-700 font-medium">
