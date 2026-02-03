@@ -120,4 +120,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Add this line here */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Prevents Navbar from covering section titles */
+  }
 }
