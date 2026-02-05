@@ -17,14 +17,16 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex gap-6 text-slate-300">
-            <a href="#" className="hover:text-white transition-colors">
-              <Twitter size={20} />
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              <Linkedin size={20} />
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              <Mail size={20} />
+            <a
+              href="https://x.com/yourusername" // REPLACE WITH YOUR URL
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              {/* X Logo SVG */}
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+              </svg>
             </a>
           </div>
         </div>
