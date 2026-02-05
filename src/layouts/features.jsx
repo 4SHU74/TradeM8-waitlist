@@ -14,6 +14,7 @@ const FeatureCard = ({ title, description, items, color, Icon }) => (
       text-white
       ${color}
       rounded-3xl
+     
     `}
   >
     <div
@@ -68,6 +69,7 @@ export default function TradeM8Features() {
         max-w-5xl
         font-sans
         bg-slate-50
+       
       "
     >
       <div className="mb-12 text-center">
@@ -100,6 +102,7 @@ export default function TradeM8Features() {
           flex-col
           w-full
           md:flex-row
+          space-x-20
         "
       >
         <FeatureCard
