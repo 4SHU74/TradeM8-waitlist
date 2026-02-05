@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="min-h-screen flex items-center justify-center p-8 font-sans">
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
-        <div className="space-y-5">
+        <div className="space-y-4 -mt-10 md:-mt-25 ">
           <h1 className="text-6xl font-bold text-slate-800 leading-tight ">
             Never Miss a <br />
             <span className="text-green-600">Trade</span>

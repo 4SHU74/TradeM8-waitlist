@@ -1,5 +1,5 @@
 import React from "react";
-import { Twitter, Linkedin, Mail, TrendingUp } from "lucide-react";
+
 import logo from "../assets/logo.png";
 
 export default function Footer() {

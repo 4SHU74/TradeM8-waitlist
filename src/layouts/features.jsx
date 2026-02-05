@@ -102,7 +102,8 @@ export default function TradeM8Features() {
           flex-col
           w-full
           md:flex-row
-          space-x-20
+          space-y-15
+          md:space-x-20
         "
       >
         <FeatureCard
