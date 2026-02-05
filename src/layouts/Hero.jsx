@@ -67,9 +67,11 @@ const Hero = () => {
           <div
             className="
               absolute
-              -top-1
-              right-24
-              z-20
+              top-4
+              right-4
+              md:-top-1
+              md:right-24
+              md:z-20
               bg-amber-400
               text-slate-800
               px-4
