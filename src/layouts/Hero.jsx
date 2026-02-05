@@ -67,8 +67,8 @@ const Hero = () => {
           <div
             className="
               absolute
-              top-2
-              right-2
+              top-1
+              right-1
               md:-top-1
               md:right-24
               md:z-20
