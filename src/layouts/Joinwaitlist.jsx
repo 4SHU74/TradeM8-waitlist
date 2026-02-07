@@ -1,8 +1,31 @@
 import React from "react";
 import { Mail, Users, Lock } from "lucide-react";
 import { Button } from "../components/ui/Button";
+import { JoinWaitlist } from "./waitlistService";
 
 export default function WaitlistSection() {
+  // 1. Create States for the email and loading status
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  // 2. The Logic Function
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevents page refresh
+    if (!email) return;
+
+    setLoading(true);
+    const result = await JoinWaitlist(email);
+    setLoading(false);
+
+    if (result.status === "success") {
+      alert("Success! Welcome to the waitlist."); // Replace this with your Pop-up/Confetti later
+      setEmail(""); // Clear the input
+    } else if (result.status === "duplicate") {
+      alert("You're already on the list!");
+    } else {
+      alert("Something went wrong. Try again.");
+    }
+  };
   return (
     <section
       id="waitlist"
@@ -48,26 +71,25 @@ export default function WaitlistSection() {
         </p>
 
         {/* Input Form */}
-        <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto mb-8">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto mb-8"
+        >
           <input
             type="email"
+            required
+            value={email} // 4. Link value to state
+            onChange={(e) => setEmail(e.target.value)} // 5. Update state on type
             placeholder="Enter your email address"
-            className="
-              flex-1
-              px-6
-              py-3.5
-              rounded-xl
-              border
-              border-slate-200
-              focus:outline-none
-              focus:ring-2
-              focus:ring-green-900/20
-              text-slate-600
-              placeholder:text-slate-400
-            "
+            className="flex-1 px-6 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-green-900/20 text-slate-600 placeholder:text-slate-400"
           />
-          <Button variant="default" size="lg">
-            Join the Waitlist
+          <Button
+            type="submit"
+            variant="default"
+            size="lg"
+            disabled={loading} // 6. Disable button while sending
+          >
+            {loading ? "Joining..." : "Join the Waitlist"}
           </Button>
         </form>
 
