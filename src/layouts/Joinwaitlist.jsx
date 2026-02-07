@@ -1,7 +1,7 @@
 import React from "react";
 import { Mail, Users, Lock } from "lucide-react";
 import { Button } from "../components/ui/Button";
-import { JoinWaitlist } from "./waitlistService";
+import { JoinWaitlist } from "../services/waitlistService";
 
 export default function WaitlistSection() {
   // 1. Create States for the email and loading status

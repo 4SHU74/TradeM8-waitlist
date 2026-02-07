@@ -1,4 +1,4 @@
-import { supabase } from "..services/supabaseClient";
+import { supabase } from "./supabaseClient";
 
 export const JoinWaitlist = async (email) => {
   const { error } = await supabase.from("waitlist").insert([{ email }]);
