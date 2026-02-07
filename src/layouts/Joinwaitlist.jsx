@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Mail, Users, Lock } from "lucide-react";
 import { Button } from "../components/ui/Button";
 import { JoinWaitlist } from "../services/waitlistService";
