@@ -29,7 +29,7 @@ export default function WaitlistSection() {
   return (
     <section
       id="waitlist"
-      className="bg-slate-50 py-20 px-4 flex justify-center items-center"
+      className=" py-20 px-4 flex justify-center items-center"
     >
       <div
         className="

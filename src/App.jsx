@@ -7,7 +7,7 @@ import Footer from "./layouts/Footer.jsx";
 export default function App() {
   return (
     <>
-      <div className="mx-4  md:mx-15 mb-23">
+      <div className="mx-4 md:mx-15 mb-23">
         <Navbar />
       </div>
       <div className=" mx-4 md:mx-15 flex flex-col gap-15 md:gap-40 mb-15 md:mb-30 ">

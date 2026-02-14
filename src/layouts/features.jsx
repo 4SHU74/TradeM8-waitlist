@@ -68,7 +68,7 @@ export default function TradeM8Features() {
         p-6
         max-w-5xl
         font-sans
-        bg-slate-50
+    
        
       "
     >
