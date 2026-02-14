@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Top Section: Logo & Icons */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-6">
           {/* Logo Area */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 mb-5">
             <img src={logo} className="w-10 h-10 rounded-lg object-contain" />
 
             <span className="text-l font-semibold">TradeM8</span>
