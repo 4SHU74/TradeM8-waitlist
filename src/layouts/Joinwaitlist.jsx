@@ -1,14 +1,42 @@
 import React, { useState, useEffect } from "react";
 import { Mail, Users, Lock } from "lucide-react";
 import { Button } from "../components/ui/Button";
-import { JoinWaitlist } from "../services/waitlistService";
+import { JoinWaitlist, getWaitlistCount } from "../services/waitlistService";
+import { supabase } from "../services/supabaseClient";
 
 export default function WaitlistSection() {
   // 1. Create States for the email and loading status
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  // state for the counter
+  const [count, setCount] = useState(0);
 
-  // 2. The Logic Function
+  // logic for counter useeffect
+  // 1. Fetch count on load & listen for changes
+  useEffect(() => {
+    const fetchInitialCount = async () => {
+      const initialCount = await getWaitlistCount();
+      setCount(initialCount);
+    };
+
+    fetchInitialCount();
+
+    // Setup Real-time listener
+    const channel = supabase
+      .channel("waitlist-realtime")
+      .on(
+        "postgres_changes",
+        { event: "INSERT", schema: "public", table: "waitlist" },
+        () => {
+          setCount((prev) => prev + 1); // Bump count live!
+        },
+      )
+      .subscribe();
+
+    return () => supabase.removeChannel(channel);
+  }, []);
+
+  // 2. The Logic Function for usestate
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevents page refresh
     if (!email) return;
@@ -109,7 +137,7 @@ export default function WaitlistSection() {
         >
           <div className="flex items-center gap-2">
             <Users size={18} className="text-green-700" />
-            <span>1,247+ traders waiting</span>
+            <span>{count.toLocaleString()}+ traders waiting</span>
           </div>
           <div className="flex items-center gap-2">
             <Lock size={18} className="text-green-700" />
